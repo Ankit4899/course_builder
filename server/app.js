@@ -14,6 +14,7 @@ app.use(cors());
 connectDB();
 
 const port = process.env.PORT || 8080;
+app.use("/api/auth", require("./routes/auth"));
 
 app.get("/", (req, res) => {
   res.send("AI LMS Backend Running");
